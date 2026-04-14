@@ -1,3 +1,4 @@
+import 'package:app_ui/utils/action_button.dart';
 import 'package:app_ui/utils/balance_card.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -93,7 +94,34 @@ class _HomePageState extends State<HomePage> {
               effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade700),
             ),
 
+            SizedBox(height: 25),
+
             //  3 buttons (send, pay, bills )
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ActionButton(
+                    iconImagePath: "lib/icons/send.png",
+                    buttonText: "Send",
+                  ),
+                  ActionButton(
+                    iconImagePath: "lib/icons/atm-card.png",
+                    buttonText: "Pay",
+                  ),
+                  ActionButton(
+                    iconImagePath: "lib/icons/bill.png",
+                    buttonText: "Bills",
+                  ),
+                  //  send button
+
+                  // pay button
+
+                  // bills button
+                ],
+              ),
+            ),
 
             // 2 columbs (stats , transactions )
           ],
