@@ -7,6 +7,7 @@ class BalanceCard extends StatelessWidget {
   final int expiryMonth;
   final int expiryYear;
   final Color color;
+  final String cardtype;
 
   const BalanceCard({
     super.key,
@@ -15,6 +16,7 @@ class BalanceCard extends StatelessWidget {
     required this.expiryMonth,
     required this.expiryYear,
     required this.color,
+    required this.cardtype,
   });
 
   @override
@@ -30,15 +32,21 @@ class BalanceCard extends StatelessWidget {
         ),
 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 10),
-            Text(
-              "Balance",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Balance",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Image.asset(cardtype, height: 60),
+              ],
             ),
 
             SizedBox(height: 10),
