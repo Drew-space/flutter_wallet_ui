@@ -19,15 +19,15 @@ class ActionButton extends StatelessWidget {
 
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.08),
-                blurRadius: 12,
-                offset: Offset(0, 6),
-              ),
-            ],
+            // color: Colors.white,
+            // borderRadius: BorderRadius.circular(20),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.black.withOpacity(0.08),
+            //     blurRadius: 12,
+            //     offset: Offset(0, 6),
+            //   ),
+            // ],
           ),
 
           child: Center(child: Image.asset(iconImagePath)),

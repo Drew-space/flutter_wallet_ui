@@ -1,5 +1,6 @@
 import 'package:app_ui/utils/action_button.dart';
 import 'package:app_ui/utils/balance_card.dart';
+import 'package:app_ui/utils/list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -94,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade700),
             ),
 
-            SizedBox(height: 25),
+            SizedBox(height: 40),
 
             //  3 buttons (send, pay, bills )
             Padding(
@@ -123,7 +124,27 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
+            SizedBox(height: 40),
+
             // 2 columbs (stats , transactions )
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                children: [
+                  CustomListTile(
+                    iconImagePath: "lib/icons/statistics.png",
+                    tileTitle: "Statistics",
+                    tileSubTitle: "Payment and Income",
+                  ),
+
+                  CustomListTile(
+                    iconImagePath: "lib/icons/report.png",
+                    tileTitle: "Transaction",
+                    tileSubTitle: "Transaction History",
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
